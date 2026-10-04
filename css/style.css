@@ -1182,3 +1182,53 @@ img{max-width:100%;display:block}
     width: 190px;
   }
 }
+/* =========================================
+   PIC1
+   ไม่มีกรอบ ไม่มีเส้น ไม่มีพื้นหลัง
+   ========================================= */
+
+.landing-photo {
+  width: min(900px, 94vw);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 0 auto 55px;
+  padding: 0;
+
+  background: transparent;
+  border: none;
+  box-shadow: none;
+}
+
+.landing-photo img {
+  width: 100%;
+  max-width: 900px;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+
+  /* ไม่มีกรอบ */
+  border: none;
+  outline: none;
+  box-shadow: none;
+
+  /* ทำให้ภาพดูนุ่มและสวยขึ้น */
+  border-radius: 0;
+}
+@media (max-width: 600px) {
+
+  .landing-photo {
+    width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .landing-photo img {
+    width: 100%;
+    max-width: 100%;
+  }
+
+}

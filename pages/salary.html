@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>การจ่ายค่าจ้าง</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .salary-highlight {
+      color: #d71920;
+      font-weight: 700;
+    }
+
+    .salary-contact {
+      color: #d71920;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .salary-step p {
+      line-height: 1.7;
+    }
+
+    .salary-note p {
+      margin: 8px 0 0;
+      line-height: 1.7;
+    }
+
+    /* ส่วนบน: การ์ดอยู่ซ้าย รูป salary อยู่ขวา */
+    .salary-top {
+      grid-column: 1 / -1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 16px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .salary-flow {
+      grid-column: 1;
+      grid-row: 1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .salary-step {
+      min-width: 0;
+      text-align: center;
+      padding: 20px 12px;
+      background: #fff;
+      border-radius: 26px;
+      box-shadow: 0 8px 20px rgba(170,20,25,.12);
+    }
+
+    .salary-step .number {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: #d71920;
+      color: #fff;
+      margin: 0 auto 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .salary-step h3 {
+      font-size: 16px;
+      line-height: 1.5;
+      margin: 0 0 12px;
+    }
+
+    .salary-step p {
+      font-size: 13px;
+      margin: 0;
+      line-height: 1.7;
+    }
+
+    .salary-top-image {
+      grid-column: 2;
+      grid-row: 1;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      box-sizing: border-box;
+      min-width: 0;
+    }
+
+    .salary-top-image img {
+      display: block;
+      width: 100%;
+      max-width: 420px;
+      max-height: 260px;
+      object-fit: contain;
+    }
+
+    /* รูป boos ด้านล่าง */
+    .salary-bottom-image {
+      width: 100%;
+      height: 230px;
+      min-height: 230px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 12px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
+
+    .salary-bottom-image img {
+      width: 100%;
+      height: 100%;
+      max-width: 100%;
+      max-height: 100%;
+      display: block;
+      object-fit: contain;
+    }
+
+    .salary-example {
+      margin-top: 12px;
+    }
+
+    @media (max-width: 900px) {
+      .salary-top {
+        grid-template-columns: 1fr;
+      }
+
+      .salary-flow {
+        grid-column: 1;
+        grid-row: 1;
+      }
+
+      .salary-top-image {
+        grid-column: 1;
+        grid-row: 2;
+      }
+
+      .salary-top-image img {
+        max-height: 220px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .salary-flow {
+        grid-template-columns: 1fr;
+      }
+
+      .salary-step {
+        padding: 20px;
+      }
+
+      .salary-top-image img {
+        max-height: 180px;
+      }
+
+      .salary-bottom-image {
+        height: 190px;
+        min-height: 190px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+<div class="page content-page">
+
+  <header class="header">
+    <div class="header-inner">
+      <a class="back" href="../menu.html">‹</a>
+
+      <img
+        src="../assets/logo.png"
+        class="logo"
+        alt="Logo"
+        onerror="this.style.visibility='hidden'"
+      >
+
+      <div>
+        <div class="header-title">คู่มือระเบียบการทำงานและสวัสดิการ</div>
+        <div class="header-sub">สำหรับพนักงานเริ่มงานใหม่</div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <div class="content-title fade-up">
+      <h1>การจ่ายค่าจ้าง</h1>
+      <p>รายละเอียดรอบคำนวณและกำหนดการจ่ายเงินเดือน</p>
+    </div>
+
+    <div class="content-layout">
+
+      <!-- การ์ดอยู่ซ้าย รูป salary อยู่ขวา -->
+      <div class="salary-top">
+
+        <div class="salary-flow">
+
+          <div class="salary-step fade-up">
+            <div class="number">1</div>
+            <h3>อัตราค่าจ้าง</h3>
+            <p>การจ่ายค่าจ้างเป็นไปตามวุฒิการศึกษา</p>
+          </div>
+
+          <div class="salary-step fade-up delay-1">
+            <div class="number">2</div>
+            <h3>วันที่คำนวณเงินเดือนและรายได้</h3>
+            <p>
+              ตั้งแต่วันที่
+              <span class="salary-highlight">21 ของเดือนที่ผ่านมา</span>
+              ถึงวันที่
+              <span class="salary-highlight">20 ของเดือนปัจจุบัน</span>
+            </p>
+          </div>
+
+          <div class="salary-step fade-up delay-2">
+            <div class="number">3</div>
+            <h3>วันจ่ายเงินเดือน</h3>
+            <p>
+              จ่ายทุกวันที่
+              <span class="salary-highlight">30</span>
+              ของเดือน
+            </p>
+          </div>
+
+        </div>
+
+        <div class="salary-top-image fade-up">
+          <img src="../assets/salary.png" alt="การจ่ายค่าจ้าง">
+        </div>
+
+      </div>
+
+      <div class="card full fade-up delay-3">
+        <h2>กรณีวันจ่ายตรงกับวันหยุด</h2>
+        <p>
+          หากวันจ่ายเงินเดือนตรงกับวันเสาร์ วันอาทิตย์
+          หรือวันหยุดนักขัตฤกษ์ บริษัทจะเลื่อนการจ่ายเงินเดือนให้เร็วขึ้น
+          เพื่อให้ตรงกับวันทำการ
+        </p>
+
+        <div class="salary-example">
+          <strong>ตัวอย่าง</strong>
+          <p>
+            หากวันที่ 30 ตรงกับวันเสาร์
+            เงินเดือนจะเลื่อนมาจ่ายในวันศุกร์ที่
+            <span class="salary-highlight">29</span>
+          </p>
+        </div>
+      </div>
+
+      <!-- รูป boos ใช้กรอบ placeholder เดิม -->
+      <div class="placeholder full fade-up delay-4 salary-bottom-image">
+        <img src="../assets/boos.png" alt="ภาพประกอบ">
+      </div>
+
+      <div class="note full fade-up delay-4 salary-note">
+        <strong>หมายเหตุ</strong>
+        <p>
+          กรณีมีข้อสงสัย ติดต่อฝ่ายบุคคลเท่านั้น
+          <span class="salary-contact">091-004-8991</span>
+        </p>
+      </div>
+
+    </div>
+  </main>
+</div>
+
+<script src="../js/main.js"></script>
+</body>
+</html>

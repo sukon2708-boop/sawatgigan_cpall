@@ -1,0 +1,445 @@
+
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>สวัสดิการ</title>
+  <link rel="stylesheet" href="../css/style.css">
+
+  <style>
+    .welfare-section {
+      margin-bottom: 32px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 14px rgba(0,0,0,.06);
+    }
+
+    .welfare-heading {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin: 0 0 20px;
+      padding: 14px 18px;
+      color: #fff;
+      background: linear-gradient(135deg,#e60012,#b8000e);
+      border-radius: 10px;
+    }
+
+    .welfare-heading h2 {
+      margin: 0;
+      color: #fff;
+      font-size: 20px;
+    }
+
+    .welfare-heading .number {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 34px;
+      height: 34px;
+      flex-shrink: 0;
+      color: #c40010;
+      background: #fff;
+      border-radius: 50%;
+      font-weight: bold;
+    }
+
+    .welfare-section .content-title {
+      margin-bottom: 18px;
+    }
+
+    .welfare-section .content-title p {
+      margin: 0;
+    }
+
+
+/* ==============================
+   จัดรูปภาพสวัสดิการให้สวยงาม
+   ============================== */
+
+.image-box {
+  width: 100%;
+  height: 280px;
+  padding: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #fff;
+  border: 1px solid rgba(215,25,32,.08);
+  border-radius: 20px;
+
+  overflow: hidden;
+  box-shadow: 0 6px 18px rgba(0,0,0,.05);
+}
+
+/* รูปภาพทุกประเภท */
+.image-box img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 12px;
+}
+
+/* รูปที่เต็มแถว */
+.image-box.full {
+  grid-column: 1 / -1;
+  width: 100%;
+}
+
+/* รูปที่อยู่ในช่องครึ่งแถว */
+.image-box:not(.full) {
+  min-width: 0;
+}
+
+/* Hover */
+.image-box img:hover {
+  transform: scale(1.02);
+  transition: transform .3s ease;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .image-box {
+    height: 250px;
+    padding: 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  .image-box {
+    height: 210px;
+    padding: 12px;
+    border-radius: 16px;
+  }
+
+  .image-box img {
+    border-radius: 10px;
+  }
+}
+/* จัดรูปภาพให้อยู่ซ้าย-ขวา */
+.image-box.half {
+  grid-column: span 1;
+  width: 100%;
+  height: 280px;
+  min-width: 0;
+  padding: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.image-box.half img {
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+/* หน้าจอมือถือให้เรียงบน-ล่าง */
+@media (max-width: 600px) {
+  .image-box.half {
+    grid-column: 1 / -1;
+    height: 220px;
+  }
+}
+
+
+  </style>
+</head>
+
+<body>
+
+<div class="page content-page">
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header-inner">
+
+      <a class="back" href="../menu.html">‹</a>
+
+      <img
+        src="../assets/logo.png"
+        class="logo"
+        alt="Logo"
+        onerror="this.style.visibility='hidden'"
+      >
+
+      <div>
+        <div class="header-title">
+          คู่มือระเบียบการทำงานและสวัสดิการ
+        </div>
+        <div class="header-sub">
+          สำหรับพนักงานเริ่มงานใหม่
+        </div>
+      </div>
+
+    </div>
+  </header>
+
+
+  <main class="container">
+
+    <!-- =========================
+         1. ประกันสังคมและสิทธิรักษาพยาบาล
+         ========================= -->
+    <section class="welfare-section">
+
+      <div class="welfare-heading">
+        <span class="number">1</span>
+        <h2>ประกันสังคมและสิทธิรักษาพยาบาล</h2>
+      </div>
+
+      <div class="content-title fade-up">
+        <p>สิทธิประโยชน์ด้านการรักษาพยาบาลสำหรับพนักงาน</p>
+      </div>
+
+      <div class="content-layout">
+
+        <div class="card fade-up">
+          <h2>ประกันสังคม</h2>
+          <ul>
+            <li>ได้รับสิทธิประกันสังคมตามที่กฎหมายกำหนด</li>
+          </ul>
+        </div>
+
+        <div class="card fade-up delay-1">
+          <h2>สิทธิรักษาพยาบาล</h2>
+          <ul>
+            <li>ได้รับสิทธิรักษาพยาบาลตามสิทธิพนักงาน</li>
+            <li>สามารถเปลี่ยนสถานพยาบาลได้ตามเงื่อนไขที่กำหนด</li>
+          </ul>
+        </div>
+
+        <div class="image-box full fade-up delay-2">
+          <img
+            src="../assets/hospital.png"
+            alt="ประกันสังคมและสิทธิรักษาพยาบาล"
+          >
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         2. สวัสดิการครอบครัว
+         ========================= -->
+    <section class="welfare-section">
+
+      <div class="welfare-heading">
+        <span class="number">2</span>
+        <h2>สวัสดิการครอบครัว</h2>
+      </div>
+
+      <div class="content-title fade-up">
+        <p>สิทธิช่วยเหลือและสวัสดิการสำหรับพนักงานและครอบครัว</p>
+      </div>
+
+      <div class="content-layout">
+
+        <div class="card fade-up">
+          <h2>ค่ารักษาพยาบาลสำหรับครอบครัว</h2>
+          <ul>
+            <li>ค่ารักษาพยาบาลสำหรับครอบครัวตามเงื่อนไขที่กำหนด</li>
+          </ul>
+        </div>
+
+        <div class="card fade-up delay-1">
+          <h2>เยี่ยมไข้ / เยี่ยมคลอด</h2>
+          <ul>
+            <li>สวัสดิการเยี่ยมไข้สำหรับผู้ป่วยใน</li>
+            <li>สวัสดิการเยี่ยมคลอดสำหรับผู้ป่วยใน</li>
+          </ul>
+        </div>
+
+        <div class="card full fade-up delay-2">
+          <h2>เงินช่วยเหลือกรณีต่าง ๆ</h2>
+          <ul>
+            <li>เงินช่วยเหลือกรณีสมรส</li>
+            <li>เงินช่วยเหลือกรณีคลอดบุตร</li>
+            <li>เงินช่วยเหลือกรณีมรณกรรม</li>
+          </ul>
+        </div>
+<div class="image-box half fade-up delay-3">
+  <img src="../assets/family.png" alt="สวัสดิการครอบครัว">
+</div>
+
+<div class="image-box half fade-up delay-4">
+  <img src="../assets/family-document.png" alt="เอกสารสวัสดิการครอบครัว">
+</div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         3. สวัสดิการค่ารักษาพยาบาล
+         ========================= -->
+    <section class="welfare-section">
+
+      <div class="welfare-heading">
+        <span class="number">3</span>
+        <h2>สวัสดิการค่ารักษาพยาบาล</h2>
+      </div>
+
+      <div class="content-title fade-up">
+        <p>สิทธิค่ารักษาพยาบาลตามสวัสดิการที่บริษัทกำหนด</p>
+      </div>
+
+      <div class="content-layout">
+
+        <div class="card fade-up">
+          <h2>ผู้ป่วยใน (IPD)</h2>
+          <p>
+            สวัสดิการค่ารักษาพยาบาลกรณีเข้ารับการรักษา
+            และพักรักษาตัวในโรงพยาบาล
+          </p>
+        </div>
+
+        <div class="card fade-up delay-1">
+          <h2>ผู้ป่วยนอก (OPD)</h2>
+          <p>
+            สวัสดิการค่ารักษาพยาบาลกรณีเข้ารับบริการ
+            โดยไม่ต้องพักรักษาตัวในโรงพยาบาล
+          </p>
+        </div>
+
+        <div class="card full fade-up delay-2">
+          <h2>ค่าห้อง / ค่าอาหาร</h2>
+          <p>
+            สิทธิค่าห้องและค่าอาหารตามหลักเกณฑ์
+            และเงื่อนไขที่บริษัทกำหนด
+          </p>
+        </div>
+
+        <div class="image-box full fade-up delay-3">
+          <img
+            src="../assets/medical.png"
+            alt="สวัสดิการค่ารักษาพยาบาล"
+          >
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         4. เงินช่วยเหลือและเงินกู้
+         ========================= -->
+    <section class="welfare-section">
+
+      <div class="welfare-heading">
+        <span class="number">4</span>
+        <h2>เงินช่วยเหลือและเงินกู้</h2>
+      </div>
+
+      <div class="content-title fade-up">
+        <p>สวัสดิการด้านการเงินเพื่อช่วยเหลือพนักงานในกรณีต่าง ๆ</p>
+      </div>
+
+      <div class="content-layout">
+
+        <div class="card fade-up">
+          <h2>เงินช่วยเหลือ</h2>
+          <ul>
+            <li>เงินช่วยเหลือกรณีประสบภัยพิบัติ</li>
+          </ul>
+        </div>
+
+        <div class="card fade-up delay-1">
+          <h2>เงินกู้ยืมและเงินยืมฉุกเฉิน</h2>
+          <ul>
+            <li>เงินกู้ยืมกรณีเจ็บป่วย</li>
+            <li>เงินยืมฉุกเฉินกรณีประสบภัยพิบัติ</li>
+          </ul>
+        </div>
+
+        <div class="card full fade-up delay-2">
+          <h2>โครงการกู้เพื่อที่พักอาศัย</h2>
+          <p>
+            โครงการเงินกู้เพื่อที่พักอาศัยสำหรับพนักงาน
+            ตามเงื่อนไขที่กำหนด
+          </p>
+        </div>
+
+        <div class="image-box full fade-up delay-3">
+          <img
+            src="../assets/financial.png"
+            alt="เงินช่วยเหลือและเงินกู้"
+          >
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- =========================
+         5. กองทุนสำรองเลี้ยงชีพ
+         ========================= -->
+    <section class="welfare-section">
+
+      <div class="welfare-heading">
+        <span class="number">5</span>
+        <h2>กองทุนสำรองเลี้ยงชีพ</h2>
+      </div>
+
+      <div class="content-title fade-up">
+        <p>สิทธิประโยชน์ด้านการออมเพื่ออนาคตของพนักงาน</p>
+      </div>
+
+      <div class="content-layout">
+
+        <div class="card fade-up">
+          <h2>คุณสมบัติการได้รับสิทธิ</h2>
+          <ul>
+            <li>มีสิทธิเมื่ออายุงาน 1 ปีขึ้นไป</li>
+          </ul>
+        </div>
+
+        <div class="card fade-up delay-1">
+          <h2>เงินสมทบตามอายุงาน</h2>
+          <ul>
+            <li>ได้รับเงินสมทบตามอายุงาน</li>
+            <li>อายุงานตั้งแต่ 5 ปีขึ้นไป รับเงินสมทบ 100%</li>
+          </ul>
+        </div>
+
+        <div class="image-box full fade-up delay-2">
+          <img
+            src="../assets/provident-fund.png"
+            alt="กองทุนสำรองเลี้ยงชีพ"
+          >
+        </div>
+
+        <div class="note full fade-up delay-3">
+          <strong>หมายเหตุ</strong>
+          การได้รับสิทธิและเงินสมทบเป็นไปตามเงื่อนไข
+          และข้อกำหนดของกองทุนสำรองเลี้ยงชีพ
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="../js/main.js"></script>
+
+</body>
+</html>
+

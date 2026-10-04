@@ -1,0 +1,125 @@
+
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>คู่มือระเบียบการทำงานและสวัสดิการ</title>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+  <main class="page">
+
+    <section class="landing">
+
+      <!-- =========================
+           ฝั่งซ้าย : LOGO / รูปภาพ
+           ========================= -->
+      <div class="landing-visual">
+
+        <!-- LOGO -->
+        <img
+          src="assets/logo.png"
+          class="landing-logo"
+          alt="CP ALL Logo"
+          onerror="
+            this.style.display='none';
+            this.nextElementSibling.style.display='flex';
+          "
+        >
+
+        <!-- แสดงเมื่อไม่มี logo.png -->
+        <div
+          class="placeholder"
+          style="
+            display:none;
+            width:260px;
+            height:180px;
+          "
+        >
+          <b>logo.png</b>
+          <small>
+            นำไฟล์โลโก้มาใส่ที่<br>
+            assets/logo.png
+          </small>
+        </div>
+
+        <!-- รูปภาพด้านล่าง -->
+        <div class="landing-photo">
+          <img
+            src="assets/pic1.png"
+            alt="ภาพประกอบคู่มือ"
+          >
+        </div>
+
+      </div>
+
+
+      <!-- =========================
+           ฝั่งขวา : ข้อมูลหน้าแรก
+           ========================= -->
+      <div class="landing-content">
+
+        <!-- ข้อความด้านบน -->
+        <div class="kicker fade-up">
+          CP ALL • NEW EMPLOYEE GUIDE
+        </div>
+
+        <!-- หัวข้อ -->
+        <h1 class="fade-up delay-1">
+          คู่มือ
+        </h1>
+
+        <!-- รายละเอียด -->
+        <h2 class="fade-up delay-2">
+          ระเบียบการทำงานและสวัสดิการ
+          <br>
+          สำหรับพนักงานเริ่มงานใหม่
+        </h2>
+
+        <!-- เส้นแดง -->
+        <div class="landing-line fade-up delay-3"></div>
+
+        <!-- ปุ่ม -->
+        <div class="landing-actions fade-up delay-4">
+
+          <a
+            class="btn red"
+            href="menu.html"
+          >
+            เข้าสู่คู่มือ
+          </a>
+
+          <a
+            class="btn white"
+            href="menu.html"
+          >
+            ดูเมนูทั้งหมด
+          </a>
+
+        </div>
+
+        <!-- QR CODE -->
+        <div class="qr-box fade-up delay-5">
+          <img
+            src="assets/qr.png"
+            alt="QR Code"
+          >
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+
+</body>
+</html>

@@ -822,3 +822,363 @@ img{max-width:100%;display:block}
   object-fit: contain;
   display: block;
 }
+/* =========================================
+   LANDING PAGE
+   ========================================= */
+
+.landing {
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  overflow: hidden;
+
+  padding: 35px 20px 50px;
+}
+
+
+/* =========================================
+   LOGO
+   ========================================= */
+
+.landing-logo-wrap {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.landing-logo {
+  width: min(280px, 70vw);
+  height: auto;
+
+  object-fit: contain;
+
+  display: block;
+}
+
+
+/* =========================================
+   PIC1
+   อยู่ด้านล่าง LOGO
+   ========================================= */
+
+.landing-photo {
+  width: min(900px, 94vw);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 65px;
+}
+
+.landing-photo img {
+  width: 100%;
+  height: auto;
+
+  display: block;
+
+  object-fit: contain;
+}
+
+
+/* =========================================
+   CONTENT
+   ========================================= */
+
+.landing-content {
+  width: 100%;
+  max-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+}
+
+
+/* =========================================
+   KICKER
+   ========================================= */
+
+.kicker {
+  font-size: clamp(18px, 3vw, 32px);
+  font-weight: 700;
+
+  color: #d71920;
+
+  letter-spacing: 1px;
+
+  margin-bottom: 15px;
+}
+
+
+/* =========================================
+   TITLE
+   ========================================= */
+
+.landing-content h1 {
+  margin: 0 0 15px;
+
+  font-size: clamp(55px, 9vw, 95px);
+  line-height: 1;
+
+  font-weight: 800;
+
+  color: #111;
+}
+
+
+/* =========================================
+   SUB TITLE
+   ========================================= */
+
+.landing-content h2 {
+  margin: 0;
+
+  font-size: clamp(25px, 4vw, 45px);
+  line-height: 1.5;
+
+  font-weight: 600;
+
+  color: #111;
+}
+
+
+/* =========================================
+   RED LINE
+   ========================================= */
+
+.landing-line {
+  width: 190px;
+  height: 12px;
+
+  margin: 35px 0 40px;
+
+  background: #e92332;
+
+  border-radius: 999px;
+}
+
+
+/* =========================================
+   BUTTONS
+   ========================================= */
+
+.landing-actions {
+  width: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  gap: 25px;
+
+  margin-bottom: 60px;
+}
+
+.btn {
+  min-width: 260px;
+
+  padding: 20px 35px;
+
+  border-radius: 60px;
+
+  font-size: 26px;
+  font-weight: 700;
+
+  text-decoration: none;
+
+  text-align: center;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+}
+
+.btn.red {
+  color: white;
+  background: #e92332;
+
+  box-shadow: 0 12px 30px rgba(233, 35, 50, 0.2);
+}
+
+.btn.white {
+  color: #d71920;
+
+  background: white;
+
+  border: 4px solid #d71920;
+}
+
+
+/* =========================================
+   QR CODE
+   ========================================= */
+
+.qr-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin-bottom: 20px;
+}
+
+.qr-box img {
+  width: min(280px, 55vw);
+  height: auto;
+
+  display: block;
+}
+
+
+/* =========================================
+   ANIMATION
+   ========================================= */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(25px);
+
+  animation: fadeUp 0.7s ease forwards;
+}
+
+.delay-1 {
+  animation-delay: 0.1s;
+}
+
+.delay-2 {
+  animation-delay: 0.2s;
+}
+
+.delay-3 {
+  animation-delay: 0.3s;
+}
+
+.delay-4 {
+  animation-delay: 0.4s;
+}
+
+.delay-5 {
+  animation-delay: 0.5s;
+}
+
+@keyframes fadeUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+  .landing {
+    padding: 25px 15px 40px;
+  }
+
+  .landing-logo {
+    width: 230px;
+  }
+
+  .landing-photo {
+    width: 100%;
+    margin-bottom: 45px;
+  }
+
+  .kicker {
+    font-size: 18px;
+  }
+
+  .landing-content h1 {
+    font-size: 58px;
+  }
+
+  .landing-content h2 {
+    font-size: 25px;
+    line-height: 1.45;
+  }
+
+  .landing-line {
+    width: 150px;
+    height: 9px;
+
+    margin: 28px 0 30px;
+  }
+
+  .landing-actions {
+    flex-direction: column;
+
+    width: 100%;
+
+    gap: 15px;
+
+    margin-bottom: 45px;
+  }
+
+  .btn {
+    width: min(330px, 90vw);
+
+    min-width: 0;
+
+    padding: 17px 20px;
+
+    font-size: 22px;
+  }
+
+  .qr-box img {
+    width: 210px;
+  }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+   ========================================= */
+
+@media (max-width: 400px) {
+
+  .landing-logo {
+    width: 200px;
+  }
+
+  .landing-photo {
+    margin-bottom: 35px;
+  }
+
+  .kicker {
+    font-size: 16px;
+  }
+
+  .landing-content h1 {
+    font-size: 50px;
+  }
+
+  .landing-content h2 {
+    font-size: 22px;
+  }
+
+  .btn {
+    font-size: 20px;
+  }
+
+  .qr-box img {
+    width: 190px;
+  }
+}
